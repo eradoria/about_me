@@ -4,7 +4,6 @@ body{
 }
 
 .grid_container{
-    border: solid white;
     margin: 0px;
     display: grid;
     flex-direction: column;
@@ -102,21 +101,19 @@ img{
       grid-template-columns: auto;
       grid-template-rows: 45% 35% 40% 45%;
       padding: 0px;
-      height:100vh;
+      height:100%;
       width:100%;
     }
 .box2{
     grid-row: 1/2;
-
 }
 .box3{
     grid-row:2/3 ;
-
 }
 .box5{
     grid-row: 3/4;
+    border-top: white;
     align-items:unset;
     justify-content:left;
-
-
+}
 }
