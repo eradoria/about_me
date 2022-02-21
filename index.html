@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Rowdies:wght@300;700&family=Syne+Tactile&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Rowdies:wght@300;700&family=Syne+Tactile&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
        h2{
@@ -39,10 +39,35 @@
                 <div class="mission"><h2>Mission</h2><p>To become a full stacked developer <br> and 
                     create web sites that inspire others!
                 </p></div>
-                <div class="pic"><img id="me" src="./about me pic.jpg" alt="" width="300px" style="position: relative;left:300px;"></div>
+                <div class="pic"><img id="me" src="./about me pic.jpg" alt="" width="300px" style="position: relative;left:400px;"></div>
             </div>
-            <div class="box6"></div>
+            <div class="box6">
+                <div class="music">
+                    <p>Click Here To Listen</p>
+                    <img src="./play-button.png" id="icon">
+                </div>
             </div>
         </div>
+        <audio id="song">
+            <source src="./halo_theme.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var song = document.getElementById("song")
+            var icon = document.getElementById("icon")
+           
+            window.onload = function() {
+            icon.onclick = function(){
+                if (song.paused){
+                    song.play();
+                    icon.scr = "./paused-button.png"
+                }
+                else{
+                    song.pause();
+                    icon.scr = "./play-button.png"
+                }
+             }
+            } 
+        </script>
     </body>
     </html>
