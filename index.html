@@ -58,13 +58,14 @@
            
             window.onload = function() {
             icon.onclick = function(){
+                console.log("paused",song.paused)
                 if (song.paused){
                     song.play();
-                    icon.scr = "./paused-button.png"
+                    icon.src = "./pause-button.png"
                 }
                 else{
                     song.pause();
-                    icon.scr = "./play-button.png"
+                    icon.src = "./play-button.png"
                 }
              }
             } 
